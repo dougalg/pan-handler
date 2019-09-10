@@ -1,0 +1,12 @@
+{
+	"excludePrivate": true,
+	"excludeNotExported": true,
+	"exclude": [ "**/*.spec.ts" ],
+	"out": "docs",
+	"json": "docs/docs.json",
+	"mode": "modules",
+	"plugin": [
+		"external-module-name",
+		"internal-external"
+	]
+}

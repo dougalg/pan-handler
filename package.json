@@ -1,29 +1,40 @@
 {
-  "name": "pan-handler",
-  "version": "1.0.0",
-  "description": "A simple zoom and pan library for canvas",
-  "main": "build/index.js",
-  "typings": "build/index.d.ts",
-  "scripts": {
-    "build": "tsc",
-    "test": "echo \"Error: no test specified\" && exit 1"
-  },
-  "repository": {
-    "type": "git",
-    "url": "git+ssh://git@github.com/dougalg/pan-handler.git"
-  },
-  "keywords": [
-    "canvas",
-    "zoom",
-    "pan"
-  ],
-  "author": "Dougal Graham",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/dougalg/pan-handler/issues"
-  },
-  "homepage": "https://github.com/dougalg/pan-handler#readme",
-  "devDependencies": {
-    "typescript": "^3.6.2"
-  }
+	"name": "pan-handler",
+	"version": "1.0.0",
+	"description": "A simple zoom and pan library for canvas",
+	"main": "build/PanHandler.js",
+	"typings": "build/PanHandler.d.ts",
+	"scripts": {
+		"build": "tsc",
+		"test": "jest",
+		"lint": "tslint ./src/**/*.{js,ts}",
+		"docs": "typedoc ./src"
+	},
+	"repository": {
+		"type": "git",
+		"url": "git+ssh://git@github.com/dougalg/pan-handler.git"
+	},
+	"keywords": [
+		"canvas",
+		"zoom",
+		"pan"
+	],
+	"author": "Dougal Graham",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/dougalg/pan-handler/issues"
+	},
+	"homepage": "https://github.com/dougalg/pan-handler#readme",
+	"devDependencies": {
+		"@types/jest": "24.0.18",
+		"canvas": "2.6.0",
+		"jest": "24.9.0",
+		"ts-jest": "24.0.2",
+		"tslint": "5.20.0",
+		"typedoc": "0.15.0",
+		"typedoc-plugin-external-module-name": "2.1.0",
+		"typedoc-plugin-internal-external": "2.0.2",
+		"typescript": "3.6.2"
+	},
+	"dependencies": {}
 }
