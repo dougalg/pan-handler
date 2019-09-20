@@ -5,9 +5,9 @@
 	"main": "build/PanHandler.js",
 	"typings": "build/PanHandler.d.ts",
 	"scripts": {
-		"build": "tsc",
-		"test": "jest",
 		"lint": "tslint ./src/**/*.{js,ts}",
+		"test": "jest",
+		"build": "tsc",
 		"docs": "typedoc ./src"
 	},
 	"repository": {
