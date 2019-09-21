@@ -1,5 +1,8 @@
 # Pan Handler 🥘
-  A simple zoom and pan library for canvas
+
+A simple zoom and pan library for canvas.
+
+(View the documentation at https://dougalg.github.io/pan-handler/)[https://dougalg.github.io/pan-handler/].
 
 ## Installation
 
@@ -51,4 +54,4 @@ draw(); // redraw after each call
 
 ### Plugins
 
-Plugins are provided for common interfaces for zoom and pan. Please see docs for more details.
+Plugins are provided for common interfaces for zoom and pan. (Please see docs for more details)[https://dougalg.github.io/pan-handler/].

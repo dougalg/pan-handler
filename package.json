@@ -8,7 +8,8 @@
 		"lint": "tslint ./src/**/*.{js,ts}",
 		"test": "jest",
 		"build": "tsc",
-		"docs": "typedoc ./src"
+		"docs": "typedoc ./src",
+		"docs:deploy": "gh-pages -d docs"
 	},
 	"repository": {
 		"type": "git",
@@ -28,6 +29,7 @@
 	"devDependencies": {
 		"@types/jest": "24.0.18",
 		"canvas": "2.6.0",
+		"gh-pages": "2.1.1",
 		"jest": "24.9.0",
 		"ts-jest": "24.0.2",
 		"tslint": "5.20.0",
