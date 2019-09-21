@@ -140,7 +140,7 @@
 							"sources": [
 								{
 									"fileName": "PanHandler.ts",
-									"line": 134,
+									"line": 135,
 									"character": 13
 								}
 							]
@@ -163,7 +163,7 @@
 									"flags": {},
 									"comment": {
 										"shortText": "Increments the current zoom by a specific amount\n*Note*: Limited by `max_zoom` and `min_zoom`",
-										"text": "```typescript\npanHandler.zoom(3);\n// Zoom is now set to 3x magnification\n\npanHandler.incrementZoom(0.5);\n// Zoom is now set to 3.5x magnification\n\npanHandler.incrementZoom(-3);\n// Zoom is now set to 0.5x magnification\n"
+										"text": "```typescript\npanHandler.zoom(3);\n// Zoom is now set to 3x magnification\n\npanHandler.incrementZoom(0.5);\n// Zoom is now set to 3.5x magnification\n\npanHandler.incrementZoom(-3);\n// Zoom is now set to 0.5x magnification\n```\n"
 									},
 									"parameters": [
 										{
@@ -187,7 +187,7 @@
 							"sources": [
 								{
 									"fileName": "PanHandler.ts",
-									"line": 123,
+									"line": 124,
 									"character": 21
 								}
 							]
