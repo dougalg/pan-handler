@@ -7,7 +7,7 @@ A simple zoom and pan library for canvas.
 ## Installation
 
 ```sh
-npm install --save-dev pan-handler
+npm install --save-dev @dougalg/pan-handler
 ```
 
 ## Usage
