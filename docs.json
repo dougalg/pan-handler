@@ -12,7 +12,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "/Users/dougal/Projects/pan-handler/src/PanHandler.ts",
+			"originalName": "/home/runner/work/pan-handler/pan-handler/src/PanHandler.ts",
 			"comment": {
 				"shortText": "The primary interface for general pan/zoom canvas manipulation"
 			},
@@ -561,7 +561,7 @@
 			"flags": {
 				"isExported": true
 			},
-			"originalName": "/Users/dougal/Projects/pan-handler/src/plugins/ClickPan.ts",
+			"originalName": "/home/runner/work/pan-handler/pan-handler/src/plugins/ClickPan.ts",
 			"comment": {
 				"shortText": "Some plugins are available to provide common functionality out of the box"
 			},
