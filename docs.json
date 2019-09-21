@@ -1,6 +1,6 @@
 {
 	"id": 0,
-	"name": "pan-handler",
+	"name": "@dougalg/pan-handler",
 	"kind": 0,
 	"flags": {},
 	"children": [
