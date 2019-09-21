@@ -1,0 +1,1002 @@
+{
+	"id": 0,
+	"name": "pan-handler",
+	"kind": 0,
+	"flags": {},
+	"children": [
+		{
+			"id": 1,
+			"name": "PanHandler",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/dougal/Projects/pan-handler/src/PanHandler.ts",
+			"comment": {
+				"shortText": "The primary interface for general pan/zoom canvas manipulation"
+			},
+			"children": [
+				{
+					"id": 8,
+					"name": "PanHandler",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"children": [
+						{
+							"id": 9,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 10,
+									"name": "new PanHandler",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 11,
+											"name": "ctx",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "CanvasRenderingContext2D"
+											}
+										},
+										{
+											"id": 12,
+											"name": "config",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {
+												"isOptional": true
+											},
+											"type": {
+												"type": "reference",
+												"name": "IPanHandlerConfig",
+												"id": 2
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "PanHandler",
+										"id": 8
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 47,
+									"character": 23
+								}
+							]
+						},
+						{
+							"id": 13,
+							"name": "currentZoom",
+							"kind": 262144,
+							"kindString": "Accessor",
+							"flags": {
+								"isExported": true
+							},
+							"getSignature": [
+								{
+									"id": 14,
+									"name": "__get",
+									"kind": 524288,
+									"kindString": "Get signature",
+									"flags": {},
+									"type": {
+										"type": "intrinsic",
+										"name": "number"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 63,
+									"character": 16
+								}
+							]
+						},
+						{
+							"id": 25,
+							"name": "clear",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 26,
+									"name": "clear",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Clears the canvas. Should be called before each redraw after modifying zoom\nor pan."
+									},
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 134,
+									"character": 13
+								}
+							]
+						},
+						{
+							"id": 22,
+							"name": "incrementZoom",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 23,
+									"name": "incrementZoom",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Increments the current zoom by a specific amount\n*Note*: Limited by `max_zoom` and `min_zoom`",
+										"text": "```typescript\npanHandler.zoom(3);\n// Zoom is now set to 3x magnification\n\npanHandler.incrementZoom(0.5);\n// Zoom is now set to 3.5x magnification\n\npanHandler.incrementZoom(-3);\n// Zoom is now set to 0.5x magnification\n"
+									},
+									"parameters": [
+										{
+											"id": 24,
+											"name": "delta",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 123,
+									"character": 21
+								}
+							]
+						},
+						{
+							"id": 15,
+							"name": "pan",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 16,
+									"name": "pan",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Pans the canvas by (x, y) amount, scaled for the current zoom level to\nmaintain visual expectations."
+									},
+									"parameters": [
+										{
+											"id": 17,
+											"name": "diffX",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 18,
+											"name": "diffY",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 71,
+									"character": 11
+								}
+							]
+						},
+						{
+							"id": 19,
+							"name": "zoom",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 20,
+									"name": "zoom",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Sets the zoom to an exact level.\n*Note*: Limited by `max_zoom` and `min_zoom`",
+										"text": "```typescript\npanHandler.zoom(3);\n// Zoom is now set to 3x magnification\n\npanHandler.zoom(0.5);\n// Zoom is now set to 0.5x magnification\n```\n"
+									},
+									"parameters": [
+										{
+											"id": 21,
+											"name": "targetScale",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 90,
+									"character": 12
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								9
+							]
+						},
+						{
+							"title": "Accessors",
+							"kind": 262144,
+							"children": [
+								13
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								25,
+								22,
+								15,
+								19
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "PanHandler.ts",
+							"line": 43,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 2,
+					"name": "IPanHandlerConfig",
+					"kind": 256,
+					"kindString": "Interface",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {},
+					"children": [
+						{
+							"id": 3,
+							"name": "fill_style",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The default style to use on clearing the canvas (default: `\"rgba(0, 0, 0, 0.1)\"`)"
+							},
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 24,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "string"
+									}
+								]
+							}
+						},
+						{
+							"id": 4,
+							"name": "full_height",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The full height of the canvas, (default `ctx.canvas.height`)"
+							},
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 26,
+									"character": 12
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 5,
+							"name": "full_width",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The full width of the canvas, (default `ctx.canvas.width`)"
+							},
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 28,
+									"character": 11
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 6,
+							"name": "max_zoom",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The maximum allowed zoom (default: 4)"
+							},
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 30,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						},
+						{
+							"id": 7,
+							"name": "min_zoom",
+							"kind": 1024,
+							"kindString": "Property",
+							"flags": {
+								"isExported": true,
+								"isOptional": true
+							},
+							"comment": {
+								"shortText": "The minimum allowed zoom (default: 0.5)"
+							},
+							"sources": [
+								{
+									"fileName": "PanHandler.ts",
+									"line": 32,
+									"character": 9
+								}
+							],
+							"type": {
+								"type": "union",
+								"types": [
+									{
+										"type": "intrinsic",
+										"name": "undefined"
+									},
+									{
+										"type": "intrinsic",
+										"name": "number"
+									}
+								]
+							}
+						}
+					],
+					"groups": [
+						{
+							"title": "Properties",
+							"kind": 1024,
+							"children": [
+								3,
+								4,
+								5,
+								6,
+								7
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "PanHandler.ts",
+							"line": 22,
+							"character": 34
+						}
+					]
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						8
+					]
+				},
+				{
+					"title": "Interfaces",
+					"kind": 256,
+					"children": [
+						2
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "PanHandler.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		},
+		{
+			"id": 27,
+			"name": "plugins",
+			"kind": 1,
+			"kindString": "External module",
+			"flags": {
+				"isExported": true
+			},
+			"originalName": "/Users/dougal/Projects/pan-handler/src/plugins/ClickPan.ts",
+			"comment": {
+				"shortText": "Some plugins are available to provide common functionality out of the box"
+			},
+			"children": [
+				{
+					"id": 28,
+					"name": "ClickPan",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "A simple click and drag to pan handler",
+						"text": "```typescript\nimport { PanHandler } from 'pan-handler/PanHandler.js';\nimport { clickPan } from 'pan-handler/plugins/ClickPan.js';\n\nconst ctx = document.getElementById('myCanvas').getContext('2d');\nconst panHandler = new PanHandler(ctx, PAN_OPTIONS);\n\nconst clearAndDraw = () => {\n    panHandler.clear();\n    // Your draw logic here...\n};\n\nconst clickPan = new ClickPan((deltaX, deltaY) => {\n    panHandler.pan(deltaX, deltaY);\n    clearAndDraw();\n});\nclickPan.addTarget(ctx.canvas);\n```\n"
+					},
+					"children": [
+						{
+							"id": 29,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 30,
+									"name": "new ClickPan",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 31,
+											"name": "onPan",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "OnPan",
+												"id": 35
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "ClickPan",
+										"id": 28
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ClickPan.ts",
+									"line": 44,
+									"character": 23
+								}
+							]
+						},
+						{
+							"id": 32,
+							"name": "addTarget",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 33,
+									"name": "addTarget",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Attach mousedown/up/move handlers to an element. When that element is clicked\nand dragged the [[OnPan]] callback will fire.",
+										"text": "You may call `addTarget` multiple times with different elements to attach\nhandlers to multiple elements.\n"
+									},
+									"parameters": [
+										{
+											"id": 34,
+											"name": "target",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "HTMLElement"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ClickPan.ts",
+									"line": 60,
+									"character": 17
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								29
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								32
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "plugins/ClickPan.ts",
+							"line": 39,
+							"character": 21
+						}
+					]
+				},
+				{
+					"id": 41,
+					"name": "ScrollZoom",
+					"kind": 128,
+					"kindString": "Class",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "A simple scroll to zoom handler",
+						"text": "```typescript\nimport { PanHandler } from 'pan-handler/PanHandler.js';\nimport { ScrollZoom } from 'pan-handler/plugins/ScrollZoom.js';\n\nconst ctx = document.getElementById('myCanvas').getContext('2d');\nconst panHandler = new PanHandler(ctx, PAN_OPTIONS);\n\nconst clearAndDraw = () => {\n    panHandler.clear();\n    // Your draw logic here...\n};\n\nconst scrollZoom = new ScrollZoom((scaleDiff) => {\n    panHandler.incrementZoom(scaleDiff);\n    clearAndDraw();\n});\nscrollZoom.addTarget(ctx.canvas);\n```\n"
+					},
+					"children": [
+						{
+							"id": 42,
+							"name": "constructor",
+							"kind": 512,
+							"kindString": "Constructor",
+							"flags": {
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 43,
+									"name": "new ScrollZoom",
+									"kind": 16384,
+									"kindString": "Constructor signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 44,
+											"name": "onZoom",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "OnZoom",
+												"id": 48
+											}
+										}
+									],
+									"type": {
+										"type": "reference",
+										"name": "ScrollZoom",
+										"id": 41
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ScrollZoom.ts",
+									"line": 43,
+									"character": 24
+								}
+							]
+						},
+						{
+							"id": 45,
+							"name": "addTarget",
+							"kind": 2048,
+							"kindString": "Method",
+							"flags": {
+								"isPublic": true,
+								"isExported": true
+							},
+							"signatures": [
+								{
+									"id": 46,
+									"name": "addTarget",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"comment": {
+										"shortText": "Attach wheel handlers to an element. When that element is mousewheeled\nthe [[OnZoom]] callback will fire",
+										"text": "You may call `addTarget` multiple times with different elements to attach\nhandlers to multiple elements.\n"
+									},
+									"parameters": [
+										{
+											"id": 47,
+											"name": "target",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "reference",
+												"name": "HTMLElement"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ScrollZoom.ts",
+									"line": 56,
+									"character": 17
+								}
+							]
+						}
+					],
+					"groups": [
+						{
+							"title": "Constructors",
+							"kind": 512,
+							"children": [
+								42
+							]
+						},
+						{
+							"title": "Methods",
+							"kind": 2048,
+							"children": [
+								45
+							]
+						}
+					],
+					"sources": [
+						{
+							"fileName": "plugins/ScrollZoom.ts",
+							"line": 41,
+							"character": 23
+						}
+					]
+				},
+				{
+					"id": 35,
+					"name": "OnPan",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Callback interface for handling the pan event",
+						"text": "```typescript\nconst onPan = (deltaX: number, deltaY: number) => {\n    panHandler.pan(deltaX, deltaY);\n    clearAndDraw();\n}\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "plugins/ClickPan.ts",
+							"line": 15,
+							"character": 17
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 36,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 37,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 38,
+											"name": "deltaX",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										},
+										{
+											"id": 39,
+											"name": "deltaY",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ClickPan.ts",
+									"line": 15,
+									"character": 19
+								}
+							]
+						}
+					}
+				},
+				{
+					"id": 48,
+					"name": "OnZoom",
+					"kind": 4194304,
+					"kindString": "Type alias",
+					"flags": {
+						"isExported": true
+					},
+					"comment": {
+						"shortText": "Callback interface for handling the scroll event",
+						"text": "```typescript\nconst onZoom = (scaleDiff: number) => {\n    panHandler.incrementZoom(scaleDiff);\n    clearAndDraw();\n}\n```\n"
+					},
+					"sources": [
+						{
+							"fileName": "plugins/ScrollZoom.ts",
+							"line": 15,
+							"character": 18
+						}
+					],
+					"type": {
+						"type": "reflection",
+						"declaration": {
+							"id": 49,
+							"name": "__type",
+							"kind": 65536,
+							"kindString": "Type literal",
+							"flags": {},
+							"signatures": [
+								{
+									"id": 50,
+									"name": "__call",
+									"kind": 4096,
+									"kindString": "Call signature",
+									"flags": {},
+									"parameters": [
+										{
+											"id": 51,
+											"name": "delta",
+											"kind": 32768,
+											"kindString": "Parameter",
+											"flags": {},
+											"type": {
+												"type": "intrinsic",
+												"name": "number"
+											}
+										}
+									],
+									"type": {
+										"type": "intrinsic",
+										"name": "void"
+									}
+								}
+							],
+							"sources": [
+								{
+									"fileName": "plugins/ScrollZoom.ts",
+									"line": 15,
+									"character": 20
+								}
+							]
+						}
+					}
+				}
+			],
+			"groups": [
+				{
+					"title": "Classes",
+					"kind": 128,
+					"children": [
+						28,
+						41
+					]
+				},
+				{
+					"title": "Type aliases",
+					"kind": 4194304,
+					"children": [
+						35,
+						48
+					]
+				}
+			],
+			"sources": [
+				{
+					"fileName": "plugins/ClickPan.ts",
+					"line": 1,
+					"character": 0
+				}
+			]
+		}
+	],
+	"groups": [
+		{
+			"title": "External modules",
+			"kind": 1,
+			"children": [
+				1,
+				27
+			]
+		}
+	]
+}
