@@ -1,0 +1,28 @@
+name: CD
+
+on:
+  pull_request:
+    types: [closed]
+    branches:
+    - master
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+
+    steps:
+    - uses: actions/checkout@v1
+    - name: Install
+      run: npm install
+    # - name: Create new version commit
+    #   run: ???
+    - name: Build Code
+      run: npm run build
+    - name: Build Docs
+      run: npm run docs
+    # - name: Publish new version to GitHub
+    #   run: ???
+    # - name: Publish to NPM
+    #   run: ????
+    - name: Publish docs
+      run: npm run docs:deploy
