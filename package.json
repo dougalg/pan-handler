@@ -7,9 +7,13 @@
 	"scripts": {
 		"lint": "tslint ./src/**/*.{js,ts}",
 		"test": "jest",
-		"build": "tsc",
+		"prebuild": "rm -rf build",
+		"build": "npm run build:es2015",
+		"build:es2015": "tsc --outDir ./build",
+		"build:docs-js": "tsc --outDir ./docs/out/assets/js/pan-handler --module none",
+		"postdocs": "npm run build:docs-js && cp -R ./docs/src/tutorials/assets/ ./docs/out/assets/js && ./docs/trim-lines.sh",
 		"docs": "typedoc ./src",
-		"docs:deploy": "gh-pages -d docs"
+		"docs:deploy": "gh-pages -d docs/out"
 	},
 	"repository": {
 		"type": "git",
@@ -36,6 +40,7 @@
 		"typedoc": "0.15.0",
 		"typedoc-plugin-external-module-name": "2.1.0",
 		"typedoc-plugin-internal-external": "2.0.2",
+		"typedoc-plugin-tutorials": "0.0.1-alpha.1",
 		"typescript": "3.6.2"
 	},
 	"dependencies": {}

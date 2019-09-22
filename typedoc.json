@@ -2,11 +2,13 @@
 	"excludePrivate": true,
 	"excludeNotExported": true,
 	"exclude": [ "**/*.spec.ts" ],
-	"out": "docs",
-	"json": "docs/docs.json",
+	"out": "docs/out",
 	"mode": "modules",
 	"plugin": [
 		"external-module-name",
-		"internal-external"
-	]
+		"internal-external",
+		"tutorials"
+	],
+	"tutorials-map": "./docs/src/tutorials/tutorials.json",
+	"tutorials-directory": "./docs/src/tutorials/tutorials"
 }
