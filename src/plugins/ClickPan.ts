@@ -60,7 +60,7 @@ export class ClickPan {
 	public addTarget(target: HTMLElement) {
 		target.addEventListener("mousedown", () => { this.mouseIsDown = true; }, false);
 		target.addEventListener("mousemove", (e) => this.handleMouseMove(e), false);
-		target.addEventListener("mouseup", () => { this.mouseIsDown = false; }, false);
+		document.addEventListener("mouseup", () => { this.mouseIsDown = false; }, false);
 	}
 
 	private handleMouseMove(event: MouseEvent) {

@@ -1,0 +1,19 @@
+{
+	"plugins": {
+		"title": "Plugins",
+		"description": "You can use plugins to get out of the box behaviour",
+		"children": {
+		"ScrollZoom": {
+			"title": "Zoom on Scroll",
+			"description": ""
+		},
+		"ClickPan": {
+			"title": "Pan on Click and Drag",
+			"description": ""
+		}
+		}
+	},
+	"custom": {
+		"title": "Custom Implementations"
+	}
+}

@@ -54,4 +54,4 @@ draw(); // redraw after each call
 
 ### Plugins
 
-Plugins are provided for common interfaces for zoom and pan. [Please see docs for more details](https://dougalg.github.io/pan-handler/).
+Plugins are provided for common interfaces for zoom and pan. [Please see docs for more details](https://dougalg.github.io/pan-handler/modules/plugins.html).
