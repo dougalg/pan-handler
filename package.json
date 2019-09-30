@@ -1,6 +1,6 @@
 {
 	"name": "@dougalg/pan-handler",
-	"version": "1.0.0",
+	"version": "1.0.1",
 	"description": "A simple zoom and pan library for canvas",
 	"main": "build/PanHandler.js",
 	"typings": "build/PanHandler.d.ts",
