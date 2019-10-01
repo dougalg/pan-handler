@@ -1,6 +1,6 @@
 ## Demo
 
-<canvas id="ScrollZoomCanvas" class="demo-canvas" width="300" height="300"></canvas>
+<canvas id="ClickPanCanvas" class="demo-canvas" width="300" height="300"></canvas>
 
 ## Code
 
@@ -8,7 +8,7 @@
 
 ```typescript
 // Canvas/draw setup
-const ctx = document.getElementById('ScrollZoomCanvas').getContext('2d');
+const ctx = document.getElementById('ClickPanCanvas').getContext('2d');
 const draw = getParticleDrawer(ctx.canvas);
 
 // Create pan handler
@@ -18,10 +18,10 @@ const PAN_OPTIONS = {
 const panHandler = new PanHandler(ctx, PAN_OPTIONS);
 
 // Attach scroll zoom plugin
-const scrollZoom = new ScrollZoom((scaleDiff) => {
+const clickPan = new ClickPan((scaleDiff) => {
 	panHandler.incrementZoom(scaleDiff);
 });
-scrollZoom.addTarget(ctx.canvas);
+clickPan.addTarget(ctx.canvas);
 
 // Run the render loop
 const loop = () => {
@@ -36,7 +36,7 @@ loop();
 ### HTML
 
 ```html
-<canvas id="ScrollZoomCanvas" class="demo-canvas" width="300" height="300"></canvas>
+<canvas id="ClickPanCanvas" class="demo-canvas" width="300" height="300"></canvas>
 ```
 
 <script defer lang="text/javascript" src="{{relativeURLToRoot /assets/js/pan-handler/PanHandler.js}}"></script>
@@ -45,7 +45,7 @@ loop();
 
 <script defer lang="text/javascript" type="module">
 	// Canvas/draw setup
-	const ctx = document.getElementById('ScrollZoomCanvas').getContext('2d');
+	const ctx = document.getElementById('ClickPanCanvas').getContext('2d');
 	const draw = getParticleDrawer(ctx.canvas);
 
 	// Create pan handler
@@ -55,10 +55,10 @@ loop();
 	const panHandler = new PanHandler(ctx, PAN_OPTIONS);
 
 	// Attach scroll zoom plugin
-	const scrollZoom = new ScrollZoom((scaleDiff) => {
+	const clickPan = new ClickPan((scaleDiff) => {
 		panHandler.incrementZoom(scaleDiff);
 	});
-	scrollZoom.addTarget(ctx.canvas);
+	clickPan.addTarget(ctx.canvas);
 
 	// Run the render loop
 	const loop = () => {
