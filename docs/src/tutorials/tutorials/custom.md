@@ -1,5 +1,5 @@
 This example shows how you can easily customize the input sources for scrolling
-and panning your canvas to be whatever you'd like. Here, we use `&lt;input type="range" /&gt;`
+and panning your canvas to be whatever you'd like. Here, we use `<input type="range" />`
 and the `input` event to externally control the pan and zoom.
 
 ## Demo
@@ -10,6 +10,8 @@ Controls
 - Vertical Pan: <input id="customVPan" type="range" value="0" min="-100" max="100" />
 
 <canvas id="CustomCanvas" class="demo-canvas" width="300" height="300"></canvas>
+
+This animation is based on [an original codepen by Elton Kamami](https://codepen.io/eltonkamami/pen/ECrKd).
 
 ## Code
 
