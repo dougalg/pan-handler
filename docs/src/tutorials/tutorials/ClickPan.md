@@ -1,6 +1,10 @@
 ## Demo
 
+Click and drag the canvas to move the content.
+
 <canvas id="ClickPanCanvas" class="demo-canvas" width="300" height="300"></canvas>
+
+This animation is based on [an original codepen by Elton Kamami](https://codepen.io/eltonkamami/pen/ECrKd).
 
 ## Code
 
@@ -18,8 +22,8 @@ const PAN_OPTIONS = {
 const panHandler = new PanHandler(ctx, PAN_OPTIONS);
 
 // Attach scroll zoom plugin
-const clickPan = new ClickPan((scaleDiff) => {
-	panHandler.incrementZoom(scaleDiff);
+const clickPan = new ClickPan((deltaX, deltaY) => {
+	panHandler.pan(deltaX, deltaY);
 });
 clickPan.addTarget(ctx.canvas);
 
@@ -55,8 +59,8 @@ loop();
 	const panHandler = new PanHandler(ctx, PAN_OPTIONS);
 
 	// Attach scroll zoom plugin
-	const clickPan = new ClickPan((scaleDiff) => {
-		panHandler.incrementZoom(scaleDiff);
+	const clickPan = new ClickPan((deltaX, deltaY) => {
+		panHandler.pan(deltaX, deltaY);
 	});
 	clickPan.addTarget(ctx.canvas);
 

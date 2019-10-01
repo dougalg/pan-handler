@@ -1,6 +1,10 @@
 ## Demo
 
+Scroll with touchpad or mousewheel to zoom the canvas.
+
 <canvas id="ScrollZoomCanvas" class="demo-canvas" width="300" height="300"></canvas>
+
+This animation is based on [an original codepen by Elton Kamami](https://codepen.io/eltonkamami/pen/ECrKd).
 
 ## Code
 
