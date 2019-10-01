@@ -6,5 +6,5 @@ declare -a arr=("PanHandler.js" "plugins.js" "plugins/ScrollZoom.js" "plugins/Cl
 for i in "${arr[@]}"
 do
 	sed -i '' -e '/^exports\..*$/d' ./docs/out/assets/js/pan-handler/$i
-	sed -i '' -e '/^Object\.defineProperty\(exports,.*$/d' ./docs/out/assets/js/pan-handler/$i
+	sed -i '' -e "/^Object\.defineProperty(exports,.*$/d" ./docs/out/assets/js/pan-handler/$i
 done

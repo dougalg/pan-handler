@@ -46,7 +46,7 @@ describe("ClickPan", () => {
 	describe("and then mouse is moved without being pressed", () => {
 		beforeAll(() => {
 			moveMouse(100, 100, target);
-			releaseMouse(target);
+			releaseMouse(document.body);
 		});
 
 		it("does not call the callback", () => {
@@ -57,7 +57,7 @@ describe("ClickPan", () => {
 	describe("and then pressing and releasing the mouse before moving it", () => {
 		beforeAll(() => {
 			pressMouse(target);
-			releaseMouse(target);
+			releaseMouse(document.body);
 			moveMouse(1000, 1000, target);
 		});
 
@@ -70,7 +70,7 @@ describe("ClickPan", () => {
 function performValidMouseMove(deltaX: number, deltaY: number, target: HTMLElement) {
 	pressMouse(target);
 	moveMouse(deltaX, deltaY, target);
-	releaseMouse(target);
+	releaseMouse(document.body);
 }
 
 function moveMouse(deltaX: number, deltaY: number, target: HTMLElement) {
